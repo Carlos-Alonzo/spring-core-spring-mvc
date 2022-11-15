@@ -23,6 +23,15 @@ public class ProductServiceImp implements ProductService{
     }
 
     @Override
+    public boolean deleteProductById(int id) {
+        boolean result = false;
+        if (id < products.size() && id >= 0) {
+            result = products.remove(id) != null;
+        }
+        return result;
+    }
+
+    @Override
     public Product saveUpdateProduct(@NotNull Product product) {
         if(!products.contains(product)) {
             int currentIndex = getIndex();

@@ -1,13 +1,12 @@
 package alonzo.carlos.spring.services;
 
 import alonzo.carlos.spring.domain.Product;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
 
-import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 @Service
 public class ProductServiceImp implements ProductService{
